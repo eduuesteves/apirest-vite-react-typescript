@@ -1,0 +1,107 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll;
+
+    .content {
+        width: 769px;
+        height: 688px;
+        padding: 2rem;
+        background: white;
+        box-shadow: 0 16px 80px rgba(0, 0, 0, .32);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        cursor: pointer;
+
+        .profileBook {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 32px;
+
+            .title {
+                h1 {
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+                p {
+                    color: #2E63F7;
+                    font-size: 12px;
+                }
+            }
+
+            .strong {
+                text-transform: uppercase;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 12px;
+
+                    span {
+                        color: #999999;
+                    }
+                }
+            }
+        }
+
+        .description {
+            p {
+                margin-top: 1rem;
+                font-size: 12px;
+                color: #999;
+
+                img {
+                    width: 17px;
+                }
+            }
+        }
+
+        img {
+            width: 349px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        display: block;
+
+        .content {
+            width: 400px;
+            height: auto;
+            flex-direction: column;
+
+            margin: 2rem auto;
+        }
+
+        img {
+            width: 500px;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .content {
+            width: calc(100% - 2rem);
+            height: auto;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
